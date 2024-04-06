@@ -5,6 +5,7 @@ const CommonButton = () => {
     return (
         <div>
             <Button>Button</Button>
+            <div className='font-inter'>aabbbbbbbbbb</div>
         </div>
     )
 }
