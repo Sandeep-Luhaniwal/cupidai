@@ -4,6 +4,7 @@ import { Captcha, Eye, Logo } from "./common/Icon";
 import { CommonLable } from "./common/CommonLable";
 import { Input } from "./ui/input";
 import { Checkbox } from "./ui/checkbox";
+import { Button } from "./ui/button";
 
 const SignUp = () => {
   return (
@@ -75,6 +76,11 @@ const SignUp = () => {
               <Captcha />
             </span>
           </div>
+          <div className="flex flex-col gap-4">
+          <Button className="!text-white py-3 md:py-4 lg:py-[18px] bg-pinkGradient" >Sign up</Button>
+          <Button className="!text-white py-3 md:py-4 lg:py-[18px] bg-lightBlack" >Login</Button>
+                            
+                        </div>
         </div>
       </div>
     </div>

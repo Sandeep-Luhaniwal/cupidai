@@ -20,7 +20,6 @@ module.exports = {
         dovengray: "#666666",
         lightBlack:"#343434",
         pink:"#FF006B",
-        pinkGradient: "linear-gradient(235.8deg, #7F04E3 -12.6%, #FF006B 106.18%)",
       },
       backgroundImage: {
         mainbg: "url('/assets/images/webp/bg-image-main.webp')",
