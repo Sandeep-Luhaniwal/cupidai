@@ -5,6 +5,7 @@ import { CommonLable } from "./common/CommonLable";
 import { Input } from "./ui/input";
 import { Checkbox } from "./ui/checkbox";
 import { Button } from "./ui/button";
+import Link from 'next/link';
 
 const SignUp = () => {
   return (
@@ -77,10 +78,12 @@ const SignUp = () => {
             </span>
           </div>
           <div className="flex flex-col gap-4">
-          <Button className="!text-white py-3 md:py-4 lg:py-[18px] bg-pinkGradient" >Sign up</Button>
-          <Button className="!text-white py-3 md:py-4 lg:py-[18px] bg-lightBlack" >Login</Button>
-                            
-                        </div>
+            <Button className="!text-white py-3 md:py-4 lg:py-[18px] bg_pinkGradient hover:!border-lightBlack duration-500" >Sign up</Button>
+
+            <Link href={"/"} className='text-center text-base text-white border border-lightBlack py-3 md:py-4 lg:py-[18px] rounded-[14px] !leading-none hover:border-pink duration-300'>
+              Login
+            </Link>
+          </div>
         </div>
       </div>
     </div>
