@@ -6,6 +6,9 @@
 body {
   font-family: "Inter", sans-serif !important;
 }
-.bg-pinkGradient{
+.bg_pinkGradient{
   background: linear-gradient(235.8deg, #7F04E3 -12.6%, #FF006B 106.18%);
+}
+.bg_pinkGradient:hover{
+  background: linear-gradient(135.8deg, #7F04E3 22.6%, #FF006B 66.18%);
 }

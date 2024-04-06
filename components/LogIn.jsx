@@ -14,7 +14,7 @@ const LogIn = () => {
                     <div className=' bg-lightgray rounded-[26px] w-full max-w-[526px] p-5 sm:p-6 md:p-[30px]'>
                         <h2 className='text-white font-medium text-[32px]'>Login</h2>
                         <p className='text-white text-opacity-60 text-base '>We are really happy to see you again</p>
-                        <Button className="!text-white my-6 sm:my-7 md:my-8 lg:my-10 py-3 md:py-4 lg:py-[18px] bg-pinkGradient" >Login</Button>
+                        <Button className="!text-white my-6 sm:my-7 md:my-8 lg:my-10 py-3 md:py-4 lg:py-[18px] bg_pinkGradient hover:!border-lightBlack duration-500" >Login</Button>
                         <div className='gap-4 md:gap-6 flex items-center'>
                             <span className='w-full h-0.5 bg-dovengray bg-opacity-25'></span>
                             <p className='text-xl text-dovengray !leading-7 font-medium'>OR</p>
@@ -31,7 +31,7 @@ const LogIn = () => {
                     </div>
                     <div className=' bg-lightgray rounded-[26px] w-full max-w-[526px] p-5 sm:p-6 md:p-[30px] mt-2.5'>
                         
-                        <div className='flex justify-center items-center'>
+                        <div className='flex justify-center items-center border border-lightBlack py-3 md:py-4 lg:py-[18px] rounded-[14px] hover:border-pink duration-300'>
                             <p className='text-base text-white font-normal'>Don’t have account?</p>
                             <Link className='text-pink text-sm font-normal hover:opacity-60 duration-500 hover:before:w-0 before:duration-300 relative before:absolute before:w-full before:h-[1px] ms-1 before:bg-pink before:bottom-[0px] ' href="/"> Create Now</Link>
                         </div>
