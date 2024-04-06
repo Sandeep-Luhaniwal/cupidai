@@ -27,6 +27,9 @@ const OtpForm = ({ setSuccessfully, setIsOpen }) => {
   });
   // =========== GET VALUES FROM INPUTS =============
   const handleInputChange = (field, value) => {
+    if (value.length > 1) {
+      value = value.substring(0, 1);
+    }
     setFormdata({ ...formdata, [field]: value });
     // ================ VALIDATE IN REAL TIME ===========
     switch (field) {
@@ -108,7 +111,7 @@ const OtpForm = ({ setSuccessfully, setIsOpen }) => {
         <Logo />
         <h1 className="text-[40px] text-white font-bold">CupidAI</h1>
       </div>
-      <div className=" p-[30px] w-full bg-lightgray rounded-[26px]">
+      <div className="p-5 sm:p-6 md:p-[30px] w-full bg-lightgray rounded-[26px]">
         <h2 className="text-[32px] font-medium text-white leading-[38.73px] mb-[2px]">
           Forgot Password
         </h2>
@@ -125,11 +128,11 @@ const OtpForm = ({ setSuccessfully, setIsOpen }) => {
           </div>
          
           <div className="flex gap-2 items-center">
-            <Input value={formdata.firstOtp} onChange={(e) => handleInputChange("firstOtp", e.target.value)} type={"number"} placeholder={"0"} className="px-7" />
-            <Input value={formdata.secondOtp} onChange={(e) => handleInputChange("secondOtp", e.target.value)} type={"number"} placeholder={"0"} className="px-7" />
-            <Input value={formdata.thirdOtp} onChange={(e) => handleInputChange("thirdOtp", e.target.value)} type={"number"} placeholder={"0"} className="px-7" />
-            <Input value={formdata.forthOtp} onChange={(e) => handleInputChange("forthOtp", e.target.value)} type={"number"} placeholder={"0"} className="px-7" />
-            <Input value={formdata.fifthOtp} onChange={(e) => handleInputChange("fifthOtp", e.target.value)} type={"number"} placeholder={"0"} className="px-7" />
+            <Input value={formdata.firstOtp} onChange={(e) => handleInputChange("firstOtp", e.target.value)} type={"number"} placeholder={"0"} className="sm:px-9 px-4" />
+            <Input value={formdata.secondOtp} onChange={(e) => handleInputChange("secondOtp", e.target.value)} type={"number"} placeholder={"0"} className="sm:px-9 px-4" />
+            <Input value={formdata.thirdOtp} onChange={(e) => handleInputChange("thirdOtp", e.target.value)} type={"number"} placeholder={"0"} className="sm:px-9 px-4" />
+            <Input value={formdata.forthOtp} onChange={(e) => handleInputChange("forthOtp", e.target.value)} type={"number"} placeholder={"0"} className="sm:px-9 px-4" />
+            <Input value={formdata.fifthOtp} onChange={(e) => handleInputChange("fifthOtp", e.target.value)} type={"number"} placeholder={"0"} className="sm:px-9 px-4" />
           </div>
         </div>
         <Button className="!text-white py-3 md:py-4 lg:py-[18px] bg_pinkGradient hover:!border-lightBlack duration-500">

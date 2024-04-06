@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import React, { useState } from "react";
 import { Captcha, Eye, Logo } from "./common/Icon";
 import { CommonLable } from "./common/CommonLable";
@@ -17,16 +17,14 @@ const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
   const regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
   const regexPassword = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@#])[A-Za-z\d@#]{8,}$/;
-  // ============ ERROR STATE ==============
   const [error, setError] = useState({
     email: false,
     password: false,
     confirmPassword: false,
   });
-  // =========== GET VALUES FROM INPUTS =============
+
   const handleInputChange = (field, value) => {
     setFormdata({ ...formdata, [field]: value });
-    // ================ VALIDATE IN REAL TIME ===========
     switch (field) {
       case "email":
         setError({
@@ -44,16 +42,13 @@ const SignUp = () => {
         break;
     }
   };
-  // ======== PASSWORD SHOW AND HIDDEN FUNCTION ===============
+
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
-  // ========== FORM SUBMITION FUNCTION ===============
+
   const formSubmit = (e) => {
-    // Prevent page reload after form submission
     e.preventDefault();
- 
-    // Check for empty fields
     if (
       formdata.confirmPassword.trim() === "" ||
       formdata.email.trim() === "" ||
@@ -66,8 +61,6 @@ const SignUp = () => {
       });
       return;
     }
-  
-    // Check regex patterns
     if (!regexEmail.test(formdata.email)) {
       setError({ ...error, email: true });
       return;
@@ -81,16 +74,15 @@ const SignUp = () => {
       return;
     }
     console.log(formdata)
-    // Clear form data and reset error state after successful submission
     setFormdata(intialData);
     setError({
       email: false,
       password: false,
       confirmPassword: false,
     });
+    // If all checks passed, you can submit the form here
   };
-  
-  
+
   return (
     <div className="min-h-screen bg-mainbg bg-cover bg-no-repeat flex justify-center items-center">
       <div className="max-w-[526px] w-full px-3 sm:px-0">
@@ -98,7 +90,7 @@ const SignUp = () => {
           <Logo />
           <h1 className="text-[40px] text-white font-bold">CupidAI</h1>
         </div>
-        <div className="p-[30px] w-full bg-lightgray rounded-[26px]">
+        <div className="p-5 sm:p-6 md:p-[30px] w-full bg-lightgray rounded-[26px]">
           <h2 className="text-[32px] font-medium text-white leading-[38.73px]">
             Sign up
           </h2>
@@ -222,3 +214,4 @@ const SignUp = () => {
 };
 
 export default SignUp;
+

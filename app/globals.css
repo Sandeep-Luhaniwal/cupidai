@@ -12,3 +12,11 @@ body {
 .bg_pinkGradient:hover{
   background: linear-gradient(135.8deg, #7F04E3 22.6%, #FF006B 66.18%);
 }
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
