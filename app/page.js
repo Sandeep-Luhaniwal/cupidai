@@ -1,9 +1,9 @@
-import CommonButton from "@/components/common/CommonButton";
+import LogIn from "@/components/LogIn";
 
 export default function Home() {
   return (
     <>
-      <CommonButton />
+      <LogIn />
     </>
   );
 }

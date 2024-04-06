@@ -3,6 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* .inter {
-  font-family: "Inter", sans-serif;
-} */
+body {
+  font-family: "Inter", sans-serif !important;
+}
+.bg-pinkGradient{
+  background: linear-gradient(235.8deg, #7F04E3 -12.6%, #FF006B 106.18%);
+}

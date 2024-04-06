@@ -19,6 +19,7 @@ module.exports = {
         boulder: "#787878",
         dovengray: "#666666",
         lightBlack:"#343434",
+        pink:"#FF006B",
         pinkGradient: "linear-gradient(235.8deg, #7F04E3 -12.6%, #FF006B 106.18%)",
       },
       backgroundImage: {
