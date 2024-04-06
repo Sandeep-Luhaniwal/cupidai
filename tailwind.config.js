@@ -13,19 +13,17 @@ module.exports = {
       fontFamily: {
         inter: "Inter, sans-serif",
       },
-      keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
-        },
+      colors: {
+        gray: "#171717",
+        lightgray: "#0f0f0f",
+        boulder: "#787878",
+        dovengray: "#666666",
+        lightBlack:"#343434",
+        pinkGradient: "linear-gradient(235.8deg, #7F04E3 -12.6%, #FF006B 106.18%)",
       },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
+      backgroundImage: {
+        mainbg: "url('/assets/images/webp/bg-image-main.webp')",
+
       },
     },
   },
