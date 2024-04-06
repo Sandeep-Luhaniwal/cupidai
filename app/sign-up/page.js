@@ -1,10 +1,9 @@
-import { Input } from '@/components/ui/input'
-import React from 'react'
+import SignUp from '@/components/SignUp'
 
 const page = () => {
   return (
     <div>
-        <Input type={"number"}/>
+     <SignUp/>
     </div>
   )
 }
