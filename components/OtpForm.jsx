@@ -106,16 +106,16 @@ const OtpForm = ({ setSuccessfully, setIsOpen }) => {
   return (
     <>
     {otpUpdate ? (<NewPassword setSuccessfully={setSuccessfully} setIsOpen={setIsOpen} />) : (
-    <div className="max-w-[526px] w-full px-3 sm:px-0">
+    <div className="max-w-[526px] w-full px-3 sm:px-0 lg:py-10 md:py-8 py-6">
       <div className="flex items-center gap-3 justify-center mb-10">
         <Logo />
         <h1 className="text-[40px] text-white font-bold">CupidAI</h1>
       </div>
-      <div className="p-5 sm:p-6 md:p-[30px] w-full bg-lightgray rounded-[26px]">
+      <div className="p-5 sm:p-6 md:p-[30px] w-full bg-lightgray md:rounded-[26px] rounded-2xl">
         <h2 className="text-[32px] font-medium text-white leading-[38.73px] mb-[2px]">
           Forgot Password
         </h2>
-        <p className="text-base font-normal text-white opacity-60 leading-[19.36px] mb-10">
+        <p className="text-base font-normal text-white opacity-60 leading-[19.36px] mb-6 sm:mb-7 md:mb-8 lg:mb-10">
           Loss password? Don’t worry we got you.
         </p>
         <form onSubmit={formSubmit}>
@@ -140,7 +140,7 @@ const OtpForm = ({ setSuccessfully, setIsOpen }) => {
         </Button>
         </form>
       </div>
-      <div className=" bg-lightgray rounded-[26px] w-full max-w-[526px] p-5 sm:p-6 md:p-[30px] mt-2.5">
+      <div className=" bg-lightgray md:rounded-[26px] rounded-2xl w-full max-w-[526px] p-5 sm:p-6 md:p-[30px] mt-2.5">
         <div className="flex justify-center items-center border border-lightBlack py-3 md:py-4 lg:py-[18px] rounded-[14px] hover:border-pink duration-300">
           <p className="text-base text-white font-normal">
             Already have an account?
