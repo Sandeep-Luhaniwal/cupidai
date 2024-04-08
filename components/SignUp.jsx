@@ -163,7 +163,7 @@ const SignUp = () => {
                 <Input
                   type={showConfirmPassword ? "text" : "password"}
                   className="pe-12"
-                 
+                  max="true"
                   placeholder={"Enter Password"}
                   value={formdata.confirmPassword}
                   onChange={(e) =>
