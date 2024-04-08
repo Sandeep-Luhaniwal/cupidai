@@ -12,7 +12,7 @@ const SignUp = () => {
     email: "",
     password: "",
     confirmPassword: "",
-  }
+  };
   const [formdata, setFormdata] = useState(intialData);
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -85,7 +85,7 @@ const SignUp = () => {
       setError({ ...error, confirmPassword: true });
       return;
     }
-    console.log(formdata)
+    console.log(formdata);
     // Clear form data and reset error state after successful submission
     setFormdata(intialData);
     setError({
@@ -94,7 +94,6 @@ const SignUp = () => {
       confirmPassword: false,
     });
   };
-
 
   return (
     <div className="min-h-screen bg-mainbg bg-cover bg-no-repeat flex justify-center items-center">
@@ -142,8 +141,11 @@ const SignUp = () => {
                     handleInputChange("password", e.target.value)
                   }
                 />
-                <span onClick={togglePasswordVisibility} className="absolute right-[18px] top-[50%] -translate-y-[50%] cursor-pointer">
-                  {showPassword ? <EyeIcon /> : <Eye />}
+                <span
+                  onClick={togglePasswordVisibility}
+                  className="absolute right-[18px] top-[50%] -translate-y-[50%] cursor-pointer"
+                >
+                  {showPassword ? <Eye /> : <EyeIcon />}
                 </span>
               </div>
               {error.password && (
@@ -163,21 +165,25 @@ const SignUp = () => {
                 <Input
                   type={showConfirmPassword ? "text" : "password"}
                   className="pe-12"
-                  max="true"
                   placeholder={"Enter Password"}
                   value={formdata.confirmPassword}
                   onChange={(e) =>
                     handleInputChange("confirmPassword", e.target.value)
                   }
                 />
-                <span onClick={togglePasswordConfirmVisibility} className="absolute right-[18px] top-[50%] -translate-y-[50%] cursor-pointer">
-                  {showConfirmPassword ? <EyeIcon /> : <Eye />}
+                <span
+                  onClick={togglePasswordConfirmVisibility}
+                  className="absolute right-[18px] top-[50%] -translate-y-[50%] cursor-pointer"
+                >
+                  {showConfirmPassword ? <Eye /> : <EyeIcon />}
                 </span>
               </div>
-              <p className="leading-[12.1px] text-[10px] font-normal text-dovengray mt-[5px]">
-                Use 8 or more characters with a mix of letters, numbers &
-                symbols
-              </p>
+              {!error.confirmPassword && (
+                <p className="leading-[12.1px] text-[10px] font-normal text-dovengray mt-[5px] absolute -bottom-[18px] left-0">
+                  Use 8 or more characters with a mix of letters, numbers &
+                  symbols
+                </p>
+              )}
               {error.confirmPassword && (
                 <p className="text-red-700  text-[10px] font-normal absolute -bottom-[18px] left-0">
                   {formdata.confirmPassword.trim() === ""
@@ -186,15 +192,21 @@ const SignUp = () => {
                 </p>
               )}
             </div>
-            <div className="flex items-center gap-2 mb-6 sm:mb-7 md:mb-8 lg:mb-10 xl:mb-12">
-              <Checkbox id="terms" />
-              <label htmlFor="terms" className="cursor-pointer w-full min-[450px]:flex font-normal text-base leading-[19.36px] text-boulder">
+            <div className="flex min-[450px]:items-center gap-2 mb-6 sm:mb-7 md:mb-8 lg:mb-10 xl:mb-12">
+              <Checkbox id="terms" className="min-[450px]:pt-0 mt-0.5" />
+              <label
+                htmlFor="terms"
+                className="cursor-pointer w-full min-[450px]:flex font-normal text-base leading-[19.36px] text-boulder"
+              >
                 <span className="text-nowrap">Agree to our</span>
                 <Link href="#" className="underline mx-1 text-nowrap">
                   Terms of use
                 </Link>
                 and
-                <Link href="#" className="underline ms-1 block min-[450px]:flex text-nowrap">
+                <Link
+                  href="#"
+                  className="underline min-[450px]:ms-1 block min-[450px]:flex text-nowrap"
+                >
                   Privacy Policy
                 </Link>
               </label>
@@ -202,7 +214,10 @@ const SignUp = () => {
             <div className="max-w-[383px] w-full px-4 md:px-6 py-[10px] rounded-[10px] bg-gray flex items-center justify-between mb-6 sm:mb-7 md:mb-8 lg:mb-10">
               <div className="flex items-center gap-2">
                 <Checkbox id="captcha" />
-                <label htmlFor="captcha" className="cursor-pointer font-normal text-base leading-[19.36px] text-boulder">
+                <label
+                  htmlFor="captcha"
+                  className="cursor-pointer font-normal text-base leading-[19.36px] text-boulder"
+                >
                   I’m not a robot
                 </label>
               </div>

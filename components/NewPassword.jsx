@@ -118,7 +118,7 @@ const NewPassword = ({setSuccessfully, setIsOpen}) => {
                     onClick={togglePasswordVisibility}
                     className="absolute right-[18px] top-[50%] -translate-y-[50%] cursor-pointer"
                   >
-                     {showPassword ? <EyeIcon /> : <Eye />}
+                     {showPassword ?  <Eye /> :<EyeIcon />}
                   </span>
                 </div>
                 {error.password && (
@@ -145,20 +145,22 @@ const NewPassword = ({setSuccessfully, setIsOpen}) => {
                     }
                   />
                   <span onClick={togglePasswordConfirmVisibility} className="absolute right-[18px] top-[50%] -translate-y-[50%] cursor-pointer">
-                  {showConfirmPassword ? <EyeIcon /> : <Eye />}
+                  {showConfirmPassword ? <Eye /> : <EyeIcon />}
                 </span>
                 </div>
-                <p className="leading-[12.1px] text-[10px] font-normal text-dovengray mt-[5px]">
+                {!error.confirmPassword && (
+                <p className="leading-[12.1px] text-[10px] font-normal text-dovengray mt-[5px] absolute -bottom-[18px] left-0">
                   Use 8 or more characters with a mix of letters, numbers &
                   symbols
                 </p>
-                {error.confirmPassword && (
-                  <p className="text-red-700  text-[10px] font-normal absolute -bottom-[18px] left-0">
-                    {formdata.confirmPassword.trim() === ""
-                      ? "Please enter your confirm password!"
-                      : "password does not match!"}
-                  </p>
-                )}
+              )}
+              {error.confirmPassword && (
+                <p className="text-red-700  text-[10px] font-normal absolute -bottom-[18px] left-0">
+                  {formdata.confirmPassword.trim() === ""
+                    ? "Please enter your confirm password!"
+                    : "password does not match!"}
+                </p>
+              )}
               </div>
               <Button className="!text-white mt-6 sm:mt-7 md:mt-8 lg:mt-10 py-3 md:py-4 lg:py-[18px] bg_pinkGradient hover:!border-lightBlack duration-500">
                 Submit
