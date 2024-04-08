@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Apple, Eye, Facebook, GoogleIcon, Logo } from "./common/Icon";
+import { Apple, Eye, EyeIcon, Facebook, GoogleIcon, Logo } from "./common/Icon";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import { CommonLable } from "./common/CommonLable";
@@ -127,7 +127,7 @@ const LogIn = () => {
                   }
                 />
                 <span  onClick={togglePasswordVisibility} className="absolute right-[18px] top-[50%] -translate-y-[50%] cursor-pointer">
-                  <Eye />
+                {showPassword ? <EyeIcon /> : <Eye />}
                 </span>
                 </div>
                 {error.password && (
