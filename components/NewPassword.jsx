@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Apple, Eye, Facebook, GoogleIcon, Logo } from "./common/Icon";
+import { Apple, Eye, EyeIcon, Facebook, GoogleIcon, Logo } from "./common/Icon";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import { CommonLable } from "./common/CommonLable";
@@ -15,6 +15,7 @@ const NewPassword = ({setSuccessfully, setIsOpen}) => {
   };
   const [formdata, setFormdata] = useState(intialData);
   const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const regexPassword = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@#])[A-Za-z\d@#]{8,}$/;
   // ============ ERROR STATE ==============
   const [error, setError] = useState({
@@ -39,6 +40,10 @@ const NewPassword = ({setSuccessfully, setIsOpen}) => {
   // ======== PASSWORD SHOW AND HIDDEN FUNCTION ===============
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
+  };
+  // ======== PASSWORD SHOW AND HIDDEN FUNCTION ===============
+  const togglePasswordConfirmVisibility = () => {
+    setShowConfirmPassword(!showConfirmPassword);
   };
   // ========== FORM SUBMITION FUNCTION ===============
   const formSubmit = (e) => {
@@ -113,7 +118,7 @@ const NewPassword = ({setSuccessfully, setIsOpen}) => {
                     onClick={togglePasswordVisibility}
                     className="absolute right-[18px] top-[50%] -translate-y-[50%] cursor-pointer"
                   >
-                    <Eye />
+                     {showPassword ? <EyeIcon /> : <Eye />}
                   </span>
                 </div>
                 {error.password && (
@@ -131,7 +136,7 @@ const NewPassword = ({setSuccessfully, setIsOpen}) => {
                 />
                 <div className="relative">
                   <Input
-                    type={showPassword ? "text" : "password"}
+                    type={showConfirmPassword ? "text" : "password"}
                     className="pe-12"
                     placeholder={"Enter Password"}
                     value={formdata.confirmPassword}
@@ -139,12 +144,9 @@ const NewPassword = ({setSuccessfully, setIsOpen}) => {
                       handleInputChange("confirmPassword", e.target.value)
                     }
                   />
-                  <span
-                    onClick={togglePasswordVisibility}
-                    className="absolute right-[18px] top-[50%] -translate-y-[50%] cursor-pointer"
-                  >
-                    <Eye />
-                  </span>
+                  <span onClick={togglePasswordConfirmVisibility} className="absolute right-[18px] top-[50%] -translate-y-[50%] cursor-pointer">
+                  {showConfirmPassword ? <EyeIcon /> : <Eye />}
+                </span>
                 </div>
                 <p className="leading-[12.1px] text-[10px] font-normal text-dovengray mt-[5px]">
                   Use 8 or more characters with a mix of letters, numbers &
