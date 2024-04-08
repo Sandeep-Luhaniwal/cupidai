@@ -127,7 +127,7 @@ const LogIn = () => {
                   }
                 />
                 <span  onClick={togglePasswordVisibility} className="absolute right-[18px] top-[50%] -translate-y-[50%] cursor-pointer">
-                {showPassword ? <EyeIcon /> : <Eye />}
+                {showPassword ? <Eye /> : <EyeIcon />}
                 </span>
                 </div>
                 {error.password && (
