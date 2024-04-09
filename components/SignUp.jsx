@@ -1,11 +1,10 @@
 "use client";
-import React, { useState } from "react";
-import { Captcha, Eye, EyeIcon, Logo } from "./common/Icon";
-import { CommonLable } from "./common/CommonLable";
-import { Input } from "./ui/input";
-import { Checkbox } from "./ui/checkbox";
-import { Button } from "./ui/button";
 import Link from "next/link";
+import { useState } from "react";
+import { CommonLable } from "./common/CommonLable";
+import { Captcha, Eye, EyeIcon, Logo } from "./common/Icon";
+import { Button } from "./ui/button";
+import { Input } from "./ui/input";
 
 const SignUp = () => {
   const intialData = {
@@ -193,7 +192,7 @@ const SignUp = () => {
               )}
             </div>
             <div className="flex min-[450px]:items-center gap-2 mb-6 sm:mb-7 md:mb-8 lg:mb-10 xl:mb-12">
-              <Checkbox id="terms" className="min-[450px]:pt-0 mt-0.5" />
+              <input type="checkbox" id="terms" className="min-[450px]:mt-0 mt-0.5" />
               <label
                 htmlFor="terms"
                 className="cursor-pointer w-full min-[450px]:flex font-normal text-base leading-[19.36px] text-boulder"
@@ -213,7 +212,7 @@ const SignUp = () => {
             </div>
             <div className="max-w-[383px] w-full px-4 md:px-6 py-[10px] rounded-[10px] bg-gray flex items-center justify-between mb-6 sm:mb-7 md:mb-8 lg:mb-10">
               <div className="flex items-center gap-2">
-                <Checkbox id="captcha" />
+                <input type="checkbox" id="captcha" />
                 <label
                   htmlFor="captcha"
                   className="cursor-pointer font-normal text-base leading-[19.36px] text-boulder"
